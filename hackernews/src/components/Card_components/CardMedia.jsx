@@ -18,6 +18,7 @@ const CardImage = styled.div`
   padding: 16px;
   border-radius: 16px 16px 0 0;
   background-image: url(${(props) => props.src});
+  background-color: black;
   background-size: cover;
   background-attachment: fixed;
   display: flex;
@@ -35,5 +36,5 @@ const CardScore = styled.div`
   align-items: center;
   font-size: 1.25rem;
   font-weight: 500;
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.7);
 `;

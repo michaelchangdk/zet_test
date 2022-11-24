@@ -10,13 +10,15 @@ import CardAction from "./Card_components/CardAction";
 const Card = ({ title, score, datetime, author, karma, url }) => {
   return (
     <CardWrapper>
-      <CardMedia title={title} score={score} />
-      <CardContent
-        title={title}
-        datetime={format(new Date(datetime * 1000), "MMM. do, yyyy HH:mm")}
-        author={author}
-        karma={karma}
-      />
+      <div>
+        <CardMedia title={title} score={score} />
+        <CardContent
+          title={title}
+          datetime={format(new Date(datetime * 1000), "MMM. do, yyyy HH:mm")}
+          author={author}
+          karma={karma}
+        />
+      </div>
       <CardAction url={url} />
     </CardWrapper>
   );
@@ -27,4 +29,7 @@ export default Card;
 const CardWrapper = styled.div`
   border-radius: 16px;
   background-color: #f5f5f5;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 `;

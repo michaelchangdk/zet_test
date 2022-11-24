@@ -4,7 +4,9 @@ import styled from "styled-components/macro";
 const CardContent = ({ title, datetime, author, karma }) => {
   return (
     <ContentArea>
-      <CardTitle>{title}</CardTitle>
+      <CardTitle>
+        <h2>{title}</h2>
+      </CardTitle>
       <CardInfo>
         <AuthorChip>
           <AuthorAvatar>{author[0].toUpperCase()}</AuthorAvatar>
@@ -12,7 +14,7 @@ const CardContent = ({ title, datetime, author, karma }) => {
             {author} - {karma} karma
           </p>
         </AuthorChip>
-        <p>{datetime}</p>
+        <Datetime>{datetime}</Datetime>
       </CardInfo>
     </ContentArea>
   );
@@ -24,9 +26,14 @@ const ContentArea = styled.div`
   padding: 16px 16px 0 16px;
 `;
 
-const CardTitle = styled.h2`
+const CardTitle = styled.div`
+  display: flex;
+  align-items: center;
   font-size: 1.25rem;
   line-height: 1.25;
+  font-weight: 500;
+  min-height: 75px;
+  text-align: center;
 `;
 
 const CardInfo = styled.div`
@@ -58,4 +65,9 @@ const AuthorChip = styled.div`
   align-items: center;
   gap: 4px;
   border: 1px solid black;
+  width: 100%;
+`;
+
+const Datetime = styled.p`
+  text-align: right;
 `;

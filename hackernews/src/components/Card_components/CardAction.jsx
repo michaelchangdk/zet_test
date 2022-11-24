@@ -16,8 +16,8 @@ export default CardAction;
 const CardActionArea = styled.div`
   display: flex;
   flex-direction: row;
-  padding: 8px 16px 16px 16px;
-  justify-content: flex-end;
+  padding: 16px 16px 16px 16px;
+  justify-content: center;
 `;
 
 const CardButton = styled.button`
@@ -27,6 +27,7 @@ const CardButton = styled.button`
   padding: 8px;
   border-radius: 4px;
   border: 1px solid black;
+  background-color: #ebe8e8;
 
   &&:hover {
     cursor: pointer;

@@ -49,22 +49,24 @@ const Home = () => {
     <Page>
       <Title>Hacker News</Title>
       {stories.length < 10 && <p>Loading</p>}
-      {stories.length === 10 &&
-        stories
-          .sort((a, b) => {
-            return a.story.score - b.story.score;
-          })
-          .map((story) => (
-            <Card
-              key={story.story.id}
-              title={story.story.title}
-              score={story.story.score}
-              datetime={story.story.time}
-              author={story.author.id}
-              karma={story.author.karma}
-              url={story.story.url}
-            />
-          ))}
+      <CardGrid>
+        {stories.length === 10 &&
+          stories
+            .sort((a, b) => {
+              return a.story.score - b.story.score;
+            })
+            .map((story) => (
+              <Card
+                key={story.story.id}
+                title={story.story.title}
+                score={story.story.score}
+                datetime={story.story.time}
+                author={story.author.id}
+                karma={story.author.karma}
+                url={story.story.url}
+              />
+            ))}
+      </CardGrid>
     </Page>
   );
 };
@@ -78,7 +80,21 @@ const Page = styled.div`
 `;
 
 const Title = styled.h1`
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-weight: 500;
   margin: 1rem 0;
+`;
+
+const CardGrid = styled.div`
+  display: grid;
+  gap: 1rem;
+  padding-bottom: 2rem;
+
+  @media (min-width: 600px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (min-width: 900px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
 `;
