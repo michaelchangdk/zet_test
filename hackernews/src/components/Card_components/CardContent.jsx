@@ -7,15 +7,13 @@ const CardContent = ({ title, datetime, author, karma }) => {
       <CardTitle>
         <h2>{title}</h2>
       </CardTitle>
-      <CardInfo>
-        <AuthorChip>
-          <AuthorAvatar>{author[0].toUpperCase()}</AuthorAvatar>
-          <p>
-            {author} - {karma} karma
-          </p>
-        </AuthorChip>
-        <Datetime>{datetime}</Datetime>
-      </CardInfo>
+      <Datetime>{datetime}</Datetime>
+      <AuthorChip>
+        <AuthorAvatar>{author[0].toUpperCase()}</AuthorAvatar>
+        <p>
+          {author} - {karma} karma
+        </p>
+      </AuthorChip>
     </ContentArea>
   );
 };
@@ -24,6 +22,10 @@ export default CardContent;
 
 const ContentArea = styled.div`
   padding: 16px 16px 0 16px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 8px;
 `;
 
 const CardTitle = styled.div`
@@ -34,14 +36,6 @@ const CardTitle = styled.div`
   font-weight: 500;
   min-height: 75px;
   text-align: center;
-`;
-
-const CardInfo = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 0.825rem;
-  padding: 8px 0;
 `;
 
 const AuthorAvatar = styled.div`
@@ -65,7 +59,6 @@ const AuthorChip = styled.div`
   align-items: center;
   gap: 4px;
   border: 1px solid black;
-  width: 100%;
 `;
 
 const Datetime = styled.p`

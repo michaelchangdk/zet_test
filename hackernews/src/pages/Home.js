@@ -48,7 +48,7 @@ const Home = () => {
   return (
     <Page>
       <Title>Hacker News</Title>
-      {stories.length < 10 && <p>Loading</p>}
+      {stories.length < 10 && <p>Loading...</p>}
       <CardGrid>
         {stories.length === 10 &&
           stories
