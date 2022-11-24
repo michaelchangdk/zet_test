@@ -14,8 +14,11 @@ Besides React, I used styled-components and date-fns packages.
 
 Error handling in e.g. the random article function, in the rare case it picks the same ID twice.
 Error handling in the API requests.
-Styling with media queries could be refined. Spacing is off on the title in a grid, so I ended up centering everything and adding a min-height - originally I had the author chip on the left, and the datetime on the right, but it looked off in small window sizes. Would like to have made a function that picks a random color based on the first two characters from user ID for the avatar.
-Would also have liked to add an animated loading indicator component.
+
+Styling with media queries could be refined. Spacing is off on the title in a grid, so I ended up centering everything and adding a min-height - originally I had the author chip on the left, and the datetime on the right, but it looked off in small window sizes.
+
+Would like to have made a function that picks a random color based on the first two characters from user ID for the avatar.
+Would also have liked to add an animated loading indicator component and favicon.
 
 # SEE IT LIVE
 
