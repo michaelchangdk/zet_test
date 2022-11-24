@@ -10,4 +10,12 @@ I spent the rest of my playtime styling, converting the datetime from Unix time 
 
 Besides React, I used styled-components and date-fns packages.
 
+# REFLECTIONS
+
+More error handling in e.g. the random article function, in the rare case it picks the same ID twice.
+More error handling in the API requests.
+Styling could also be refined. Spacing is off on the title in a grid, so I ended up centering everything and adding a min-height. Would like to have made a function that picks a random color based on the first two characters from user ID for the avatar.
+
 # SEE IT LIVE
+
+https://hackernews-test.netlify.app/
